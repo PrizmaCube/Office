@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketchfab Configurator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <iframe src="" id="api-frame" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="vr" width="640"
+            height="400"></iframe>
+        <div class="options"></div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.3.2.js"></script>
+<script type="text/javascript" src="./SketchfabConfigurator-1.0.6.js"></script>
+<script type="text/javascript">
+    var config = {
+    "model": "9483dac9fc844ac1bbb45c01206f74b9",
+    "params": {
+        "camera": 0,
+        "preload": 1,
+        "ui_controls": 0,
+        "ui_infos": 0,
+        "ui_watermark": 0
+    },
+    "config": [
+        {
+            "name": "Внутренний дизайн",
+            "type": "color",
+            "material": "Metal Flakes Filled Plastic",
+            "default": "#ffffff",
+            "options": [
+                {
+                    "name": "Розовый",
+                    "color": "#d7a8a8",
+                    "id": 1690653439162
+                },
+                {
+                    "name": "white",
+                    "color": "#adadad",
+                    "id": 1690653439162
+                },
+                {
+                    "name": "white",
+                    "color": "#8e3939",
+                    "id": 1690653439162
+                },
+                {
+                    "name": "white",
+                    "color": "#FFFFFF",
+                    "id": 1690653439162
+                },
+                {
+                    "name": "white",
+                    "color": "#c28ead",
+                    "id": 1690653439162
+                },
+                {
+                    "name": "white",
+                    "color": "#5c83c1",
+                    "id": 1690653439162
+                }
+            ]
+        },
+        {
+            "name": "Дополнительная кастомизация",
+            "type": "color",
+            "material": "Plastic 6",
+            "default": "#232424",
+            "options": [
+                {
+                    "name": "Пепельный",
+                    "color": "#dbdbdb",
+                    "id": 1690654377948
+                },
+                {
+                    "name": "Розовый",
+                    "color": "#d7a8a8",
+                    "id": 1690654377948
+                },
+                {
+                    "name": "Кирпичный",
+                    "color": "#8e3939",
+                    "id": 1690654377948
+                },
+                {
+                    "name": "Белый",
+                    "color": "#FFFFFF",
+                    "id": 1690654377948
+                },
+                {
+                    "name": "432",
+                    "color": "#c28ead",
+                    "id": 1690654377948
+                },
+                {
+                    "name": "Синий",
+                    "color": "#5c83c1",
+                    "id": 1690654377948
+                }
+            ]
+        },
+        {
+            "name": "Тонирование стекла",
+            "type": "color",
+            "material": "Glass",
+            "default": "#feffff",
+            "options": [
+                {
+                    "name": "white",
+                    "color": "#8a8a8a",
+                    "id": 1690654911784
+                },
+                {
+                    "name": "white",
+                    "color": "#3d3d3d",
+                    "id": 1690654911784
+                }
+            ]
+        },
+        {
+            "name": "Color",
+            "type": "color",
+            "material": "Plastic 5",
+            "default": "#948F8A",
+            "options": [
+                {
+                    "name": "white",
+                    "color": "#3b3b3b",
+                    "id": 1690655530457
+                }
+            ]
+        }
+    ]
+};
+    var iframeEl = document.getElementById('api-frame');
+    var optionsEl = document.querySelector('.options');
+    var configurator = new SketchfabConfigurator.Configurator(iframeEl, optionsEl, config);
+</script>
+
+</html>
